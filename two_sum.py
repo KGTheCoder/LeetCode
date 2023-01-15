@@ -26,6 +26,18 @@ class Solution:
     return []
     """
 
+    """
+    d = {}
+
+    for i, n in enumerate(nums):
+      diff = target - n
+      if diff not in d:
+        d[n] = i
+        print(d)
+      else:
+        return [d[diff], i]
+    """
+
     
 
 solution = Solution()
