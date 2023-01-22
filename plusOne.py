@@ -16,10 +16,15 @@ class Solution:
     return [1] + digits
     """
 
+    """
     num = 0
     for i in range(len(digits)):
       num += digits[i] * pow(10, (len(digits)-1-i))
+      print("num =", num)
     return [int(i) for i in str(num+1)]
+    """
+
+    
 
 
 sol = Solution()
