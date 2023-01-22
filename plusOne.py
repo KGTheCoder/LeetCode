@@ -38,7 +38,10 @@ class Solution:
     return digits
     """
 
-    
+    a = ''.join(map(str, digits))
+    b = int(a) + 1
+    c = str(b)
+    return list(map(int, c))
 
 
 sol = Solution()
