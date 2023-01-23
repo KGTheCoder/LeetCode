@@ -38,10 +38,34 @@ class Solution:
     return digits
     """
 
+    """
     a = ''.join(map(str, digits))
     b = int(a) + 1
     c = str(b)
     return list(map(int, c))
+    """
+
+    """
+    if digits[-1] < 9:
+      digits[-1] += 1
+      return digits
+    elif len(digits) == 1 and digits[0] == 9:
+      return [1, 0]
+    else:
+      digits[-1] = 0
+      digits[0:-1] = self.plusOne(digits[0:-1])
+      return digits
+    """
+
+    """
+    a = [str(i) for i in digits]
+    a = ''.join(a)
+    a = str(int(a) + 1)
+    return [int(i) for i in a]
+    """
+
+    return [int(i) for i in str(int(''.join([str(i) for i in digits])) + 1)]
+
 
 
 sol = Solution()
